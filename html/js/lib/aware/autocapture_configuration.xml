@@ -1,0 +1,218 @@
+<?xml version="1.0" ?>
+<!--
+Copyright (C) 2017 Aware, Inc - All Rights Reserved
+Unauthorized copying of this file, via any medium is strictly prohibited
+Proprietary and confidential
+
+This is a typical autocapture file for a single finger livescan device. It
+does not restrict finger angles and permits fingers to touch edges.
+-->
+
+<awls_fc name="standardTemplate">
+
+    <!-- ****************************************************************************************** -->
+    <!-- Capture Session Parameters -->
+    <session>
+        <!-- timeout: ends the capture session when the value (used as seconds)  -->
+        <!-- expires -->
+        <param name="timeout" value="30"  enabled="false"/>
+        <!-- captureOnTimeout: when the timeout expires this parameter indicates if -->
+        <!-- the device should capture an image or abort -->
+        <!-- the 'enabled' parameter has no effect -->
+        <param name="captureOnTimeout" value="true" enabled="true"/>
+        <!-- number_consecutive_passing_frames: indicates the number of successive passing -->
+        <!-- frames (preview image frames that meet all specified hand and finger requirements -->
+        <!-- that are required prior to signaling the device to capture -->
+        <param name="number_consecutive_passing_frames" value="2" enabled="true"/>
+    </session>
+
+    <!-- ****************************************************************************************** -->
+    <!-- Hand Parameters -->
+    <!-- name: indicates the right or left hand-->
+    <!-- enforceHandedness: indicates the use of handedness detection -->
+    <!-- it is not recommended that this option be used if any fingers are missing -->
+    <!-- minHandednessConfidence: the minimum acceptable handedness confidence value -->
+    <hand name="right" enforceHandedness="true" minHandednessConfidence="50">
+        <!-- knownSlapFingerCount: the known number of fingers for the hand, this value may -->
+        <!-- be used separately from the finger 'isPresent' (if the exact missing finger is not -->
+        <!-- known, if the two parameters are used together than the proper number of fingers -->
+        <!-- should be recorded here -->
+        <param name="knownSlapFingerCount" value="4" enabled="true"/>
+
+        <!-- ****************************************************************************************** -->
+        <!-- Finger Parameters -->
+        <!-- name: indicates the thumb, index, middle, ring or little finger -->
+        <finger name="thumb">
+            <!-- ****************************************************************************************** -->
+            <!-- Plain Impression Parameters -->
+            <impressionType name="plain">
+
+                <!-- isPresent: indicates the presence of the finger, if the finger is known missing -->
+                <!-- then this value should be set, doing so will cause the automatic adjustment of the -->
+                <!-- image analysis paramters where the 'knownSlapFingerCount' will not -->
+                <param name="isPresent" value="true" enabled="true"/>
+                <!-- canTouchEdges: indicates that any or all of the fingers can touch the edge of the -->
+                <!-- scanned image -->
+                <param name="canTouchEdges" value="true" enabled="false"/>
+                <!-- minQuality: the minimum acceptable quality score for the finger -->
+                <param name="minQuality" value="40" enabled="true"/>
+                <!-- maxAngle: the maximum acceptable rotation angle (absolute value) for the finger -->
+                <param name="maxAngle" value="30" enabled="false"/>
+                <!-- minFingerWidth: the minimum acceptable width of this plain finger -->
+                <param name="minFingerWidth" value="130" enabled="true"/>
+                <!-- maxFingerWidth: the maximum acceptable width of this plain finger -->
+                <param name="maxFingerWidth" value="1000" enabled="true"/>
+                <!-- minFingerHeight: the minimum acceptable height of this plain finger -->
+                <param name="minFingerHeight" value="200" enabled="true"/>
+                <!-- maxFingerHeight: the maximum acceptable height of this plain finger -->
+                <param name="maxFingerHeight" value="1500" enabled="true"/>
+                <!-- maxAllowedMovementX: the maximum allowed between-frame change in the horizontal -->
+                <!-- position of this plain finger -->
+                <param name="maxAllowedMovementX" value="30" enabled="true"/>
+                <!-- maxAllowedMovementY: the maximum allowed between-frame change in the vertical -->
+                <!-- position of this plain finger -->
+                <param name="maxAllowedMovementY" value="30" enabled="true"/>
+            </impressionType>
+        </finger>
+
+        <finger name="index">
+            <impressionType name="plain">
+                <param name="isPresent" value="true" enabled="true"/>
+                <param name="canTouchEdges" value="true" enabled="false"/>
+                <param name="minQuality" value="40" enabled="true"/>
+                <param name="maxAngle" value="30" enabled="false"/>
+                <param name="minFingerWidth" value="130" enabled="true"/>
+                <param name="maxFingerWidth" value="500" enabled="true"/>
+                <param name="minFingerHeight" value="200" enabled="true"/>
+                <param name="maxFingerHeight" value="1500" enabled="true"/>
+                <param name="maxAllowedMovementX" value="30" enabled="true"/>
+                <param name="maxAllowedMovementY" value="30" enabled="true"/>
+            </impressionType>
+        </finger>
+
+        <finger name="middle">
+            <impressionType name="plain">
+                <param name="isPresent" value="true" enabled="true"/>
+                <param name="canTouchEdges" value="true" enabled="false"/>
+                <param name="minQuality" value="40" enabled="true"/>
+                <param name="maxAngle" value="30" enabled="false"/>
+                <param name="minFingerWidth" value="130" enabled="true"/>
+                <param name="maxFingerWidth" value="500" enabled="true"/>
+                <param name="minFingerHeight" value="200" enabled="true"/>
+                <param name="maxFingerHeight" value="1500" enabled="true"/>
+                <param name="maxAllowedMovementX" value="30" enabled="true"/>
+                <param name="maxAllowedMovementY" value="30" enabled="true"/>
+            </impressionType>
+        </finger>
+
+        <finger name="ring">
+            <impressionType name="plain">
+                <param name="isPresent" value="true" enabled="true"/>
+                <param name="canTouchEdges" value="true" enabled="false"/>
+                <param name="minQuality" value="40" enabled="true"/>
+                <param name="maxAngle" value="30" enabled="false"/>
+                <param name="minFingerWidth" value="130" enabled="true"/>
+                <param name="maxFingerWidth" value="500" enabled="true"/>
+                <param name="minFingerHeight" value="200" enabled="true"/>
+                <param name="maxFingerHeight" value="1500" enabled="true"/>
+                <param name="maxAllowedMovementX" value="30" enabled="true"/>
+                <param name="maxAllowedMovementY" value="30" enabled="true"/>
+            </impressionType>
+        </finger>
+
+        <finger name="little">
+            <impressionType name="plain">
+                <param name="isPresent" value="true" enabled="true"/>
+                <param name="canTouchEdges" value="true" enabled="false"/>
+                <param name="minQuality" value="40" enabled="true"/>
+                <param name="maxAngle" value="30" enabled="false"/>
+                <param name="minFingerWidth" value="130" enabled="true"/>
+                <param name="maxFingerWidth" value="500" enabled="true"/>
+                <param name="minFingerHeight" value="200" enabled="true"/>
+                <param name="maxFingerHeight" value="1500" enabled="true"/>
+                <param name="maxAllowedMovementX" value="30" enabled="true"/>
+                <param name="maxAllowedMovementY" value="30" enabled="true"/>
+            </impressionType>
+        </finger>
+    </hand>
+
+
+    <hand name="left" enforceHandedness="true" minHandednessConfidence="50">
+        <param name="knownSlapFingerCount" value="4" enabled="true"/>
+
+        <finger name="thumb">
+            <impressionType name="plain">
+                <param name="isPresent" value="true" enabled="true"/>
+                <param name="canTouchEdges" value="true" enabled="false"/>
+                <param name="minQuality" value="40" enabled="true"/>
+                <param name="maxAngle" value="30" enabled="false"/>
+                <param name="minFingerWidth" value="130" enabled="true"/>
+                <param name="maxFingerWidth" value="1000" enabled="true"/>
+                <param name="minFingerHeight" value="200" enabled="true"/>
+                <param name="maxFingerHeight" value="1500" enabled="true"/>
+                <param name="maxAllowedMovementX" value="30" enabled="true"/>
+                <param name="maxAllowedMovementY" value="30" enabled="true"/>
+            </impressionType>
+        </finger>
+
+        <finger name="index">
+            <impressionType name="plain">
+                <param name="isPresent" value="true" enabled="true"/>
+                <param name="canTouchEdges" value="true" enabled="false"/>
+                <param name="minQuality" value="40" enabled="true"/>
+                <param name="maxAngle" value="30" enabled="false"/>
+                <param name="minFingerWidth" value="130" enabled="true"/>
+                <param name="maxFingerWidth" value="500" enabled="true"/>
+                <param name="minFingerHeight" value="200" enabled="true"/>
+                <param name="maxFingerHeight" value="1500" enabled="true"/>
+                <param name="maxAllowedMovementX" value="30" enabled="true"/>
+                <param name="maxAllowedMovementY" value="30" enabled="true"/>
+            </impressionType>
+        </finger>
+
+        <finger name="middle">
+            <impressionType name="plain">
+                <param name="isPresent" value="true" enabled="true"/>
+                <param name="canTouchEdges" value="true" enabled="false"/>
+                <param name="minQuality" value="40" enabled="true"/>
+                <param name="maxAngle" value="30" enabled="false"/>
+                <param name="minFingerWidth" value="130" enabled="true"/>
+                <param name="maxFingerWidth" value="500" enabled="true"/>
+                <param name="minFingerHeight" value="200" enabled="true"/>
+                <param name="maxFingerHeight" value="1500" enabled="true"/>
+                <param name="maxAllowedMovementX" value="30" enabled="true"/>
+                <param name="maxAllowedMovementY" value="30" enabled="true"/>
+            </impressionType>
+        </finger>
+
+        <finger name="ring">
+            <impressionType name="plain">
+                <param name="isPresent" value="true" enabled="true"/>
+                <param name="canTouchEdges" value="true" enabled="false"/>
+                <param name="minQuality" value="40" enabled="true"/>
+                <param name="maxAngle" value="30" enabled="false"/>
+                <param name="minFingerWidth" value="130" enabled="true"/>
+                <param name="maxFingerWidth" value="500" enabled="true"/>
+                <param name="minFingerHeight" value="200" enabled="true"/>
+                <param name="maxFingerHeight" value="1500" enabled="true"/>
+                <param name="maxAllowedMovementX" value="30" enabled="true"/>
+                <param name="maxAllowedMovementY" value="30" enabled="true"/>
+            </impressionType>
+        </finger>
+
+        <finger name="little">
+            <impressionType name="plain">
+                <param name="isPresent" value="true" enabled="true"/>
+                <param name="canTouchEdges" value="true" enabled="false"/>
+                <param name="minQuality" value="40" enabled="true"/>
+                <param name="maxAngle" value="30" enabled="false"/>
+                <param name="minFingerWidth" value="130" enabled="true"/>
+                <param name="maxFingerWidth" value="500" enabled="true"/>
+                <param name="minFingerHeight" value="200" enabled="true"/>
+                <param name="maxFingerHeight" value="1500" enabled="true"/>
+                <param name="maxAllowedMovementX" value="30" enabled="true"/>
+                <param name="maxAllowedMovementY" value="30" enabled="true"/>
+            </impressionType>
+        </finger>
+    </hand>
+</awls_fc>

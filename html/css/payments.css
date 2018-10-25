@@ -1,0 +1,111 @@
+/* vista de opciones de pago disponible*/
+
+.pricing-table .plan {
+  border: none;
+  margin: 20px 0;
+  position: relative;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #e2e2e4;
+  border-bottom: none;
+  text-align: center;
+}
+.pricing-table .plan li {
+  padding: 10px 15px;
+  color: #8e8e93;
+  border-bottom: 1px solid #e2e2e4;
+}
+.pricing-table .plan li.plan-name {
+  padding: 15px;
+  font-size: 18px;
+  line-height: 18px;
+  color: #fff;
+  background: #d5d4d8;
+  border-top: 0;
+  border-bottom: 0;
+}
+.pricing-table .plan li.plan-price {
+  background: #c8c7cc;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 6px 20px;
+  border-bottom: none;
+}
+.pricing-table .plan li.plan-price h3 {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 2em;
+  padding: 30px 0;
+  font-weight: 600;
+  color: #ffffff;
+}
+.pricing-table .plan li.plan-price h3 .price-cents {
+  font-size: 50%;
+  vertical-align: super;
+  margin-left: -10px;
+}
+.pricing-table .plan li.plan-price h3 .price-month {
+  font-size: 30%;
+  font-style: italic;
+  margin-left: -20px;
+  font-weight: 300;
+  color: #ffffff;
+}
+.pricing-table .plan li.plan-action {
+  margin-top: 10px;
+  border-top: 0;
+}
+.pricing-table .plan.featured {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0 3px 25px -4px rgba(0, 0, 0, 0.9) !important;
+}
+.pricing-table .plan.featured .plan-name {
+  background: #94929b;
+}
+
+.pricing-green .plan li strong {
+  color: #C82E29;
+}
+.pricing-green .plan li.plan-name {
+  background: #23d1b9;
+}
+.pricing-green .plan li.plan-price {
+  background: #1FBBA6;
+  color: #ffffff;
+}
+.pricing-green .plan.featured .plan-name {
+  background: #106458;
+}
+
+.pricing-blue .plan li strong {
+  color: #5F8295;
+}
+.pricing-blue .plan li.plan-name {
+  background: #6c8fa1;
+}
+.pricing-blue .plan li.plan-price {
+  background: #5F8295;
+  color: #ffffff;
+}
+.pricing-blue .plan.featured .plan-name {
+  background: #374c57;
+}
+
+.pricing-red .plan li strong {
+  color: #C82E29;
+}
+.pricing-red .plan li.plan-name {
+  background: #d63a35;
+}
+.pricing-red .plan li.plan-price {
+  background: #C82E29;
+  color: #ffffff;
+}
+.pricing-red .plan.featured .plan-name {
+  background: #731b18;
+}
+.btn {
+    float: none;
+}

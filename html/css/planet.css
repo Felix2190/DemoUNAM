@@ -1,0 +1,24 @@
+/*     Style Sheet designed, programmed and structured by Makko IT    */
+/*     Please do not copy or imitate, contribute! R3gardz!            */
+/*                   makko.mx - madmind.mx                            */
+/* ------------------------------------------------------------------ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, acronym, address, big, cite, code, del, dfn, em, font, images, ins, kbd,q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; }
+ol, ul {list-style: none;}
+table {border-collapse: separate;border-spacing: 0;}
+caption, th, td {text-align: left;font-weight: normal;}
+h1, h2, h3, h4, h5, h6 {font-weight:normal;}
+/* General Elements */
+body{font-family: Arial, sans-serif;font-size: 62.5%;line-height: 1.4;text-align: center;color: #000;background: #fff;padding: 0;margin: 0;}		
+strong{font-weight: bold;}
+em{font-style: italic;}
+address {font-style: normal;font-size: 115%;}
+input, textarea, select {font: 1em Arial, sans-serif;}
+img{border: none;}
+.vacio{clear: both; border: none; margin: 0; padding: 0; background: transparent;line-height: 0.3;}
+
+/* Start Custom */
+#welcome{width: 90%;margin: 30px auto 0 auto;}
+#welcome img{}
+#welcome p{margin: 30px 0;}
+#welcome p a{background-color: #842563;padding: 10px 16px;border-radius: 5px;color: #fff;cursor: pointer;text-decoration: none;font-size: 14px;}
+#welcome p a:hover{background-color: #ABA99F;}

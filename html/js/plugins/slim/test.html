@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Slim Examples</title>
+
+    <link rel="stylesheet" href="slim.min.css">
+
+
+
+</head>
+<body>
+
+<main>
+
+
+
+    <h3>Upload and edit existing image</h3>
+
+    <div class="slim" id="myCropper" data-size="640,640">
+        <img src="Desert.jpg"  alt="">
+    </div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="slim.jquery.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('body').slim('parse');
+  });          
+</script>
+
+</body>
+</html>

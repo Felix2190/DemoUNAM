@@ -1,0 +1,44 @@
+/*------------------------------------*\
+-------- DEMO Code: accordion
+\*------------------------------------*/
+/*----- Accordion -----*/
+.accordion, .accordion * {
+	-webkit-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	box-sizing:border-box;
+}
+
+.accordion {
+	overflow:hidden;
+
+
+}
+
+/*----- Section Titles -----*/
+.accordion-section-title {
+
+
+	transition:all linear 0.15s;
+	/* Type */
+
+
+
+}
+
+.accordion-section-title.active, .accordion-section-title:hover {
+
+	/* Type */
+	text-decoration:none;
+}
+
+.accordion-section:last-child .accordion-section-title {
+	border-bottom:none;
+}
+
+/*----- Section Content -----*/
+.accordion-section-content {
+	padding:15px;
+	display:none;
+}
+
+.accordion-section{ margin-bottom: 0 !important;}
