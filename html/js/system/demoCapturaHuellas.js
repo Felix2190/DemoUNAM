@@ -453,8 +453,20 @@ function sig(){
 		arrAutorizaciones.length = 0;
 	}
 	mostrarEspera('Espere un momento...');
+	 $("#txtNombre").val("");
+	 $("#slcCapturar").val("1");
+	
+	 
 	setTimeout(function(){
+		$("#divCapturarHuellas").hide();
+		$("#divCapturaH").hide();
+		$("#txtNombre").attr('disabled',false);
+		$("#slcCapturar").attr('disabled',false);
+		$("#btnIniciar").attr('disabled',false);
+		$("#btnReiniciar").attr('disabled',true);
+		
 		ocultarMensaje();
+		mostrarAviso('Se capturaron las huellas d&aacute;ctilares correctamente');
 	//	xajax_enrolarFingerPrint();
 		//cargar('capturarIris.php,accordion-4,acc-4');
 	},2000);
@@ -464,6 +476,17 @@ function inicializarControles()
 { 
 	$("#btnIniciar").click(comenzar);
 	$("#btnReiniciar").click(reiniciar);
+	$("#btnOmitir").click(function(){
+		mostrarAviso('No se capturaron las huellas d&aacute;ctilares');
+		setTimeout(function(){
+			ocultarMensaje();
+			 $("#txtNombre").val("");
+			 $("#slcCapturar").val("1");
+			reiniciar();
+		},2500);
+
+		
+		});
 	//mostrarAviso('Captura de huella d&aacute;ctilares');
 	/*
 	

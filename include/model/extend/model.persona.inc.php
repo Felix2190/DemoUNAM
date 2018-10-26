@@ -140,6 +140,11 @@
         
         public function makeFolders($nombre)
         {
+            if(!is_dir($_SERVER['DOCUMENT_ROOT'] . "DemoUNAM/html/tmp/"))
+            {
+                mkdir($_SERVER['DOCUMENT_ROOT'] . "DemoUNAM/html/tmp/",0762);
+            }
+            
             if(!is_dir($_SERVER['DOCUMENT_ROOT'] . "DemoUNAM/html/tmp/$nombre/"))
         	{
         	    mkdir($_SERVER['DOCUMENT_ROOT'] . "DemoUNAM/html/tmp/$nombre/",0762);
