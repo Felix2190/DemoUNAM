@@ -264,4 +264,3 @@
 	define("_NOW_",date("Y-m-d H:i:s"));
 	define("_CURDATE_",date("Y-m-d"));
 	//define("EMAIL_SYSTEM","soporte@kduceo.com");
-

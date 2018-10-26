@@ -101,6 +101,26 @@
     <script src="js/Chart.js/Chart.min.js"></script>   
     <script src="js/plugins/generics.js"></script>
     
+        <style type="text/css">
+.legend li span {
+	width: 1em;
+	height: 1em;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.legend {
+	list-style: none;
+}
+
+.img-responsive img {
+max-width: 65%;
+height: auto;   
+display:block;
+	    }
+
+</style>
+    
     <?php
 			echo $_JAVASCRIPT_CSS;
 		?>
@@ -134,8 +154,75 @@
 										<div class="inner-padding">						
                                     
 										<div class="col-sm-12">
-										</div>
+										
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="inner-padding"> 
+				
+								<div class="row">
+								<div class="col-sm-12">
+									<div class="col-sm-1 text-right">
+										<label class="control-label">Nombre </label> 
+									</div>
+									<div class="col-sm-3">
+										<input id="txtNombre"  class="form-control" type="text" maxlength="50"/>
+									</div>
+									<div class="col-sm-1 text-right">
+										<label class="control-label">Captura </label> 
+									</div>
+									<div class="col-sm-3">
+										<select id="slcCapturar"  class="form-control">
+											<option value="1">Pulgares</option>
+											<option value="2">&Iacute;ndices</option>
+											<option value="3">Medios</option>
+											<option value="4">Anulares</option>
+											<option value="5">Me&ntilde;iques</option>
+										</select>
+									</div>
+									<div class="col-sm-2">
+										<input id="btnIniciar" type="button" class="btn btn-primary"  value="Iniciar" />
+										<input id="btnReiniciar" type="button" class="btn btn-info" disabled="disabled" value="Reiniciar" />
+										
+									</div>
+									<div class="col-sm-2">
+										<input id="btnOmitir" type="button" class="btn btn-warning"  value="Omitir" />
+									</div>
+														
 								</div>
+								
+								<div class="spacer-30"></div>
+								
+									<div class="col-sm-12" id="divCapturarHuellas" style="display: none">
+
+										<p>
+											Estatus: <span id="status"></span>
+										</p>
+										<p>
+											Mensajes de Captura: <span id="autocaptureStatus"></span>
+										</p>
+
+									</div>
+
+									<div class="img-responsive" id="divCapturaH" style="display: none;"></div>
+										
+										
+								</div>
+
+
+				<div class="spacer-30"></div>
+
+
+			</div>
+		</div>
+	</div>
+											
+											
+										
+										</div>
+										
+										</div>
+										
+										
                                     <div class="spacer-50"></div>                                       	
                                     <!-- End .inner-padding -->  
                                 </div>
@@ -144,6 +231,13 @@
                      <!-- </div> -->
                  </div> <!-- End .window -->                
                 <?php include_once('footer.php'); ?>
+          <script src="js/lib/aware/es6-promise/es6-promise.js"></script>
+<script src="js/lib/aware/biocomponents/aw_fingerprint_capture.js"></script>
+<script src="js/lib/aware/biocomponents/aw_fingerprint_set.js"></script>
+<script src="js/lib/aware/biocomponents/WebsocketTransport.js"></script>
+<script src="js/lib/aware/binary-file-saver/BinaryFileSaver.js"></script>
+<script src="js/lib/aware/fingerprint_capture_complete.js"></script>
+
                 
                 <a data-toggle="modal" id="_alertShow" style="display:none" class="btn btn-danger" role="button" href="#_alertBox">Alert</a>
 		<div class="modal fade" id="_alertBox" tabindex="-1" role="dialog" aria-hidden="true">

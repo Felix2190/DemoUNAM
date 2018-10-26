@@ -13,9 +13,9 @@
 		var $keyAware='';
 		var $nombre='';
 		var $tipo='huella';
-		var $prioridad=0;
+		var $controlID=0;
 
-		var $__s=array("idBiometrico","clave","keyAware","nombre","tipo","prioridad");
+		var $__s=array("idBiometrico","clave","keyAware","nombre","tipo","controlID");
 		var $__ss=array();
 
 		#------------------------------------------------------------------------------------------------------#
@@ -82,10 +82,10 @@
 		{
 			$this->tipo='rostro';
 		}
-		public function setPrioridad($prioridad)
+		public function setControlID($controlID)
 		{
 			
-			$this->prioridad=$prioridad;
+			$this->controlID=$controlID;
 		}
 
 		#------------------------------------------------------------------------------------------------------#
@@ -119,9 +119,9 @@
 		{
 			return $this->tipo;
 		}
-		public function getPrioridad()
+		public function getControlID()
 		{
-			return $this->prioridad;
+			return $this->controlID;
 		}
 
 		#------------------------------------------------------------------------------------------------------#
@@ -142,7 +142,7 @@
 			$this->keyAware='';
 			$this->nombre='';
 			$this->tipo='huella';
-			$this->prioridad=0;
+			$this->controlID=0;
 		}
 
 		
@@ -152,8 +152,8 @@
 		{
 			try
 			{
-				$SQL="INSERT INTO biometrico(clave,keyAware,nombre,tipo,prioridad)
-						VALUES('" . mysqli_real_escape_string($this->dbLink,$this->clave) . "','" . mysqli_real_escape_string($this->dbLink,$this->keyAware) . "','" . mysqli_real_escape_string($this->dbLink,$this->nombre) . "','" . mysqli_real_escape_string($this->dbLink,$this->tipo) . "','" . mysqli_real_escape_string($this->dbLink,$this->prioridad) . "')";
+				$SQL="INSERT INTO biometrico(clave,keyAware,nombre,tipo,controlID)
+						VALUES('" . mysqli_real_escape_string($this->dbLink,$this->clave) . "','" . mysqli_real_escape_string($this->dbLink,$this->keyAware) . "','" . mysqli_real_escape_string($this->dbLink,$this->nombre) . "','" . mysqli_real_escape_string($this->dbLink,$this->tipo) . "','" . mysqli_real_escape_string($this->dbLink,$this->controlID) . "')";
 				$result=mysqli_query($this->dbLink,$SQL);
 				if(!$result)
 					return $this->setSystemError("Error en la insercion de registro.","[" . $SQL . "][" . mysqli_error($this->dbLink) . "][ModeloBaseBiometrico::Insertar]");
@@ -173,7 +173,7 @@
 		{
 			try
 			{
-				$SQL="UPDATE biometrico SET clave='" . mysqli_real_escape_string($this->dbLink,$this->clave) . "',keyAware='" . mysqli_real_escape_string($this->dbLink,$this->keyAware) . "',nombre='" . mysqli_real_escape_string($this->dbLink,$this->nombre) . "',tipo='" . mysqli_real_escape_string($this->dbLink,$this->tipo) . "',prioridad='" . mysqli_real_escape_string($this->dbLink,$this->prioridad) . "'
+				$SQL="UPDATE biometrico SET clave='" . mysqli_real_escape_string($this->dbLink,$this->clave) . "',keyAware='" . mysqli_real_escape_string($this->dbLink,$this->keyAware) . "',nombre='" . mysqli_real_escape_string($this->dbLink,$this->nombre) . "',tipo='" . mysqli_real_escape_string($this->dbLink,$this->tipo) . "',controlID='" . mysqli_real_escape_string($this->dbLink,$this->controlID) . "'
 					WHERE idBiometrico=" . $this->idBiometrico;
 				
 				$result=mysqli_query($this->dbLink,$SQL);
@@ -215,7 +215,7 @@
 			try
 			{
 				$SQL="SELECT
-						idBiometrico,clave,keyAware,nombre,tipo,prioridad
+						idBiometrico,clave,keyAware,nombre,tipo,controlID
 					FROM biometrico
 					WHERE idBiometrico=" . mysqli_real_escape_string($this->dbLink,$this->idBiometrico);
 					
