@@ -170,60 +170,61 @@ function imprimeHuella(fingerCapturados){
 		console.log('imprime huella----> '+impression);
 		if (impression === FingerprintSetApi.Impression.RIGHT_SLAP_INDEX_FINGER)
         setComponent.getSegmentedImage(FingerprintSetApi.Impression.RIGHT_SLAP_INDEX_FINGER,
-                FingerprintSetApi.ImageFormat.PNG).then( function(imageData){
+                FingerprintSetApi.ImageFormat.WSQ).then( function(imageData){
                 	console.log('RIGHT IN '+nombre);
+                	//BinaryFileSaver.saveBase64(imageData, "capture.wsq");
                 xajax_guardarHuella('DI',$("#slcOpcDI").val(),imageData,nombre);
             });
 		if (impression === FingerprintSetApi.Impression.RIGHT_SLAP_MIDDLE_FINGER)
             setComponent.getSegmentedImage(FingerprintSetApi.Impression.RIGHT_SLAP_MIDDLE_FINGER,
-                FingerprintSetApi.ImageFormat.PNG).then( function(imageData){
+                FingerprintSetApi.ImageFormat.WSQ).then( function(imageData){
                 	console.log('RIGHT MIDD');
                 xajax_guardarHuella('DE',$("#slcOpcDE").val(),imageData,nombre);
             });
 		if (impression === FingerprintSetApi.Impression.RIGHT_SLAP_RING_FINGER)
             setComponent.getSegmentedImage(FingerprintSetApi.Impression.RIGHT_SLAP_RING_FINGER,
-                FingerprintSetApi.ImageFormat.PNG).then( function(imageData){
+                FingerprintSetApi.ImageFormat.WSQ).then( function(imageData){
                 	console.log('RIGHT RING');
                 xajax_guardarHuella('DA',$("#slcOpcDA").val(),imageData,nombre);
             });
 		if (impression === FingerprintSetApi.Impression.RIGHT_SLAP_LITTLE_FINGER)
             setComponent.getSegmentedImage(FingerprintSetApi.Impression.RIGHT_SLAP_LITTLE_FINGER,
-                FingerprintSetApi.ImageFormat.PNG).then( function(imageData){
+                FingerprintSetApi.ImageFormat.WSQ).then( function(imageData){
                 	console.log('RIGHT LIT');
                 xajax_guardarHuella('DM',$("#slcOpcDM").val(),imageData,nombre);
             });
    
 		if (impression === FingerprintSetApi.Impression.LEFT_SLAP_INDEX_FINGER)
 		 setComponent.getSegmentedImage(FingerprintSetApi.Impression.LEFT_SLAP_INDEX_FINGER,
-	                FingerprintSetApi.ImageFormat.PNG).then( function(imageData){
+	                FingerprintSetApi.ImageFormat.WSQ).then( function(imageData){
 	                	console.log('LEFT IN '+nombre);
 	                xajax_guardarHuella('II',$("#slcOpcII").val(),imageData,nombre);
 	            });
 		if (impression === FingerprintSetApi.Impression.LEFT_SLAP_MIDDLE_FINGER)
 	            setComponent.getSegmentedImage(FingerprintSetApi.Impression.LEFT_SLAP_MIDDLE_FINGER,
-	                FingerprintSetApi.ImageFormat.PNG).then( function(imageData){
+	                FingerprintSetApi.ImageFormat.WSQ).then( function(imageData){
 	                	console.log('LEFT MI');
 	                xajax_guardarHuella('IE',$("#slcOpcIE").val(),imageData,nombre);
 	            });
 		if (impression === FingerprintSetApi.Impression.LEFT_SLAP_RING_FINGER)
 	            setComponent.getSegmentedImage(FingerprintSetApi.Impression.LEFT_SLAP_RING_FINGER,
-	            FingerprintSetApi.ImageFormat.PNG).then( function(imageData){
+	            FingerprintSetApi.ImageFormat.WSQ).then( function(imageData){
 	            	console.log('LEFT RING');
 	                xajax_guardarHuella('IA',$("#slcOpcIA").val(),imageData,nombre);
 	            });
 		if (impression === FingerprintSetApi.Impression.LEFT_SLAP_LITTLE_FINGER)
 	            setComponent.getSegmentedImage(FingerprintSetApi.Impression.LEFT_SLAP_LITTLE_FINGER,
-	                FingerprintSetApi.ImageFormat.PNG).then( function(imageData){
+	                FingerprintSetApi.ImageFormat.WSQ).then( function(imageData){
 	               xajax_guardarHuella('IM',$("#slcOpcIM").val(),imageData,nombre);
 	            });
 		if (impression === FingerprintSetApi.Impression.PLAIN_DUAL_THUMBS_RIGHT)
 		    setComponent.getSegmentedImage(FingerprintSetApi.Impression.PLAIN_DUAL_THUMBS_RIGHT,
-	                FingerprintSetApi.ImageFormat.PNG).then( function(imageData){
+	                FingerprintSetApi.ImageFormat.WSQ).then( function(imageData){
 	                xajax_guardarHuella('DP',$("#slcOpcDP").val(),imageData,nombre);
 	            });
 		if (impression === FingerprintSetApi.Impression.PLAIN_DUAL_THUMBS_LEFT)
 		    setComponent.getSegmentedImage(FingerprintSetApi.Impression.PLAIN_DUAL_THUMBS_LEFT,
-	                FingerprintSetApi.ImageFormat.PNG).then( function(imageData){
+	                FingerprintSetApi.ImageFormat.WSQ).then( function(imageData){
 	                xajax_guardarHuella('IP',$("#slcOpcIP").val(),imageData,nombre);
 	            });
 	        

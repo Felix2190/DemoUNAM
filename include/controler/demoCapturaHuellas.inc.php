@@ -103,9 +103,9 @@ function guardarHuella($key,$estatus,$base64,$nombre)
 		{
 			if($img64!="")
 			{
-				$fileNameTmp = "0000000_" .$Bio->getControlID() . ".bmp";
+				$fileNameTmp = "0000000_" .$Bio->getControlID() . ".wsq";
 				$ifp = fopen($dir_subida . $fileNameTmp, "wb");
-				fwrite($ifp, base64_decode($img64));
+				fwrite($ifp, base64_decode($base64));
 				fclose($ifp);
 //				$_SESSION['huellasEnrolar'][$key]=$dir_subida . $fileNameTmp;    
 			}
